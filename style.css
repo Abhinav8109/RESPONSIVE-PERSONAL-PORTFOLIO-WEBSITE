@@ -532,3 +532,61 @@
    font-size: 1.6rem;
    margin: 1rem 0 0;
 }
+
+.achievements {
+   background: var(--second-bg-color);
+   padding: 10rem 9% 2rem;  /* same spacing as timeline/portfolio */
+}
+
+.achievements h2 {
+   margin-bottom: 4rem;
+   text-align: center;
+   font-size: 4.5rem;   /* same as timeline heading */
+}
+
+.achievements-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 4rem;
+}
+
+.achievements-image img {
+   max-width: 900px;
+   width: 100%;
+   border-radius: 2rem;
+   box-shadow: 0 0 1rem var(--bg-color);
+   transition: .5s ease;
+}
+
+.achievements-image img:hover {
+   transform: scale(1.03);
+}
+
+.achievements-content {
+   max-width: 600px;
+}
+
+.achievements-content h3 {
+   font-size: 2.6rem;   /* match services-box heading */
+   margin-bottom: 1.5rem;
+   color: var(--main-color);
+}
+
+.achievements-content ul {
+   margin: 1.5rem 0;
+   padding-left: 2rem;
+}
+
+.achievements-content ul li {
+   margin-bottom: 1rem;
+   font-size: 1.6rem;   /* match p text size */
+   line-height: 1.6;
+}
+
+.achievements-content p {
+   font-size: 1.6rem;   /* consistent with other sections */
+   margin-top: 1rem;
+   line-height: 1.7;
+}
