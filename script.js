@@ -51,3 +51,64 @@ const typed = new Typed('.multiple-text',{
     backDelay:1000,
     loop:true
 });
+
+const cloudItems = [
+  {
+    img: "image/cloud1.png",
+    title: "🔥 Cloud Hero Challenge",
+    desc: "90 minutes of real Google Cloud problem solving."
+  },
+  {
+    img: "image/cloud2.png",
+    title: "☁ Google Cloud Summit Delhi",
+    desc: "Honored to attend Google Cloud Summit 2025 in Delhi."
+  },
+  {
+    img: "image/cloud3.png",
+    title: "🎁 Google Cloud Swags",
+    desc: "Proud moments with Google Cloud swag & community vibes."
+  },
+  {
+    img: "image/cloud4.png",
+    title: "📜 KodeKloud Certificate",
+    desc: "GCP DevOps Project completion certificate — mastering cloud DevOps."
+  },
+  {
+    img: "image/cloud5.png",
+    title: "🏅 Google Cloud Skill Badges",
+    desc: "Multiple Google Cloud Skill Badges achieved in 2025."
+  }
+];
+
+let currentCloud = 0;
+
+function showCloud(index) {
+  const item = cloudItems[index];
+  document.getElementById("cloud-img").src = item.img;
+  document.getElementById("cloud-title").innerText = item.title;
+  document.getElementById("cloud-desc").innerText = item.desc;
+}
+
+function prevCloud() {
+  currentCloud = (currentCloud - 1 + cloudItems.length) % cloudItems.length;
+  showCloud(currentCloud);
+}
+
+function nextCloud() {
+  currentCloud = (currentCloud + 1) % cloudItems.length;
+  showCloud(currentCloud);
+}
+function updateCloudImage(index) {
+  const imageElement = document.querySelector(".cloud-image img");
+  const imageWrapper = document.querySelector(".cloud-image");
+
+  // Set the new image
+  imageElement.src = cloudImages[index].src;
+  imageElement.alt = cloudImages[index].alt;
+
+  // Set blurred background
+  imageWrapper.style.setProperty(
+    "--bg-url",
+    `url('${cloudImages[index].src}')`
+  );
+}
